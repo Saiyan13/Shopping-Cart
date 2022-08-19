@@ -26,6 +26,12 @@ document.getElementById('btn-phone-plus').addEventListener('click',function(){
      const currentSubTotal = currentPhonTotal + caseNumberFielddddd;
      const subTotalElement = document.getElementById('sub-total');
      subTotalElement.innerText=currentSubTotal;
+
+    //  calculate Tax
+    const taxAmountString = (currentSubTotal * 0.1).toFixed(2);
+    const taxAmount = parseFloat(taxAmountString)
+    const taxTotalAmount = document.getElementById('tax-amount')
+     taxTotalAmount.innerText = taxAmount;
 })
 
 
@@ -54,4 +60,9 @@ document.getElementById('btn-phone-minus').addEventListener('click',function(){
      const currentSubTotal = currentPhonTotal + caseNumberFielddddd;
      const subTotalElement = document.getElementById('sub-total');
      subTotalElement.innerText=currentSubTotal;
+
+     const taxAmountString = (currentSubTotal * 0.1).toFixed(2);
+     const taxAmount = parseFloat(taxAmountString)
+     const taxTotalAmount = document.getElementById('tax-amount')
+      taxTotalAmount.innerText = taxAmount;
 })

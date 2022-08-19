@@ -56,7 +56,11 @@ document.getElementById('btn-case-plus').addEventListener('click', function () {
      const currentSubTotal = currentPhonTotal + caseNumberFielddddd;
      const subTotalElement = document.getElementById('sub-total');
      subTotalElement.innerText=currentSubTotal;
-
+          //  calculate Tax
+          const taxAmountString = (currentSubTotal * 0.1).toFixed(2);
+          const taxAmount = parseFloat(taxAmountString)
+          const taxTotalAmount = document.getElementById('tax-amount')
+           taxTotalAmount.innerText = taxAmount;
     // const caseTotalElement = document.getElementById('case-total')
             //    const caseTotalElementSring = caseTotalElement.innerText;
             //    const caseNumberFielddddd = parseInt(caseTotalElementSring);
@@ -98,5 +102,11 @@ document.getElementById("btn-case-minus").addEventListener('click', function () 
      const currentSubTotal = currentPhonTotal + caseNumberFielddddd;
      const subTotalElement = document.getElementById('sub-total');
      subTotalElement.innerText=currentSubTotal;
+
+          //  calculate Tax
+    const taxAmountString = (currentSubTotal * 0.1).toFixed(2);
+    const taxAmount = parseFloat(taxAmountString)
+    const taxTotalAmount = document.getElementById('tax-amount')
+     taxTotalAmount.innerText = taxAmount;
 })
 
